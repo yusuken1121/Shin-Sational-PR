@@ -1,10 +1,9 @@
-import { Contact } from "lucide-react";
-
 import { Hero } from "./_components/hero";
 import { InstallationSteps } from "./_components/installation-steps";
 import { Pricing } from "./_components/pricing";
 import { Support } from "./_components/support";
 import { Summaries } from "./_components/summary";
+import { Contact } from "./_components/contact";
 
 export default function Home() {
   return (
