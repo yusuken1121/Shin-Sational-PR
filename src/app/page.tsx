@@ -7,7 +7,7 @@ import { Support } from "./_components/support";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-background text-foreground">
       <Hero />
       <Features />
 

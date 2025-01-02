@@ -32,7 +32,7 @@ export function Contact() {
             </div>
             <Button
               type="submit"
-              className="w-full bg-[#C8A97E] hover:bg-[#B69A71] text-black"
+              className="w-full bg-accent hover:bg-accent text-black"
             >
               送信する
             </Button>

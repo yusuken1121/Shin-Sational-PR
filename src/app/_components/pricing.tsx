@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function Pricing() {
   return (
-    <section className="py-24 bg-black">
+    <section className="py-24 bg-primary">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           料金プラン
@@ -22,19 +22,19 @@ export function Pricing() {
             </div>
             <ul className="space-y-4 mb-6">
               <li className="flex items-center">
-                <Check className="w-5 h-5 text-[#C8A97E] mr-2" />
+                <Check className="w-5 h-5 text-accent mr-2" />
                 <span>無料インストール</span>
               </li>
               <li className="flex items-center">
-                <Check className="w-5 h-5 text-[#C8A97E] mr-2" />
+                <Check className="w-5 h-5 text-accent mr-2" />
                 <span>24時間テクニカルサポート</span>
               </li>
               <li className="flex items-center">
-                <Check className="w-5 h-5 text-[#C8A97E] mr-2" />
+                <Check className="w-5 h-5 text-accent mr-2" />
                 <span>アップデート無料</span>
               </li>
             </ul>
-            <Button className="w-full bg-[#C8A97E] hover:bg-[#B69A71] text-black">
+            <Button className="w-full bg-accent hover:bg-accent/60 text-black">
               今すぐ始める
             </Button>
           </CardContent>
