@@ -30,10 +30,7 @@ export function Contact() {
                 className="bg-primary border-zinc-700"
               />
             </div>
-            <Button
-              type="submit"
-              className="w-full bg-accent hover:bg-accent text-black"
-            >
+            <Button type="submit" variant="default" className="w-full">
               Send
             </Button>
           </form>

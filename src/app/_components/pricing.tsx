@@ -9,12 +9,12 @@ export function Pricing() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Pricing
         </h2>
-        <Card className="max-w-lg mx-auto bg-zinc-800 border-zinc-700">
+        <Card className="max-w-lg mx-auto bg-background border-zinc-700">
           <CardHeader>
             <CardTitle className="text-2xl text-center">Support Plan</CardTitle>
           </CardHeader>
           <CardContent className="p-6">
-            <div className="text-center mb-6">
+            <div className="text-center mb-2">
               <span className="text-2xl font-bold mb-2 line-through">
                 $10/month
               </span>
@@ -40,7 +40,7 @@ export function Pricing() {
                 </li>
               </ul>
             </div>
-            <Button className="w-full bg-accent hover:bg-accent/60 text-black">
+            <Button variant="default" className="w-full">
               Get started now
             </Button>
           </CardContent>
