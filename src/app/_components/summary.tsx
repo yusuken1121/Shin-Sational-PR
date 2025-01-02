@@ -1,5 +1,7 @@
 import { Check, PenBoxIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { TbCoinOff } from "react-icons/tb";
+import { TiSpannerOutline } from "react-icons/ti";
 
 // FeatureCard コンポーネント
 interface FeatureCardProps {
@@ -25,8 +27,10 @@ function FeatureCard({
         <div className="flex items-center justify-center w-full">
           <div className="w-20 h-20 my-2">{icon}</div>
         </div>
-        <p>{description}</p>
-        <p>{description2}</p>
+        <div className="flex flex-col gap-2 text-zinc-400">
+          <p>{description}</p>
+          {description2 && <p>{description2}</p>}
+        </div>
       </CardContent>
     </Card>
   );
@@ -37,20 +41,22 @@ export function Summaries() {
   const features = [
     {
       title: "Sophisticated Design",
-      icon: <Check className="w-full h-full text-foreground" />,
+      icon: <PenBoxIcon className="w-full h-full text-foreground" />,
       description:
-        "モダンでエレガントなデザインで、あなたのブランドを際立たせます",
+        "Elevate your brand with a sleek, modern design. Our digital menu adds a touch of class that sets you apart from the competition.",
     },
     {
       title: "For Free",
-      icon: <PenBoxIcon className="w-full h-full text-foreground" />,
-      description: "No installation cost",
-      description2: "*Support fee will be charged from second month",
+      icon: <TbCoinOff className="w-full h-full text-foreground" />,
+      description:
+        "Get started for free! No initial setup fees. It's the perfect opportunity to upgrade your menu without breaking the bank.",
+      description2: "*Support fee will be charged from the second month.",
     },
     {
       title: "Technical Support",
-      icon: <Check className="w-full h-full text-foreground" />,
-      description: "専門知識不要で、すぐにデジタルメニューを始められます",
+      icon: <TiSpannerOutline className="w-full h-full text-foreground" />,
+      description:
+        "No tech expertise needed! We offer comprehensive support from setup to ongoing management, so you can focus on what you do best - running your restaurant.",
     },
   ];
 
@@ -67,6 +73,7 @@ export function Summaries() {
               title={feature.title}
               icon={feature.icon}
               description={feature.description}
+              description2={feature.description2}
             />
           ))}
         </div>
