@@ -3,10 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export function Support() {
   const supportItems = [
-    "初期設定サポート",
-    "運用サポート",
-    "技術的なお問い合わせ対応",
-    "アップデート情報の提供",
+    "Initial Setup Support",
+    "Operational Support",
+    "Technical Inquiry Handling",
+    "Update Information Delivery",
   ];
 
   return (
@@ -15,7 +15,7 @@ export function Support() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Support Contents
         </h2>
-        <Card className="max-w-lg mx-auto bg-zinc-800 border-zinc-700">
+        <Card className="max-w-lg mx-auto bg-background border-zinc-700">
           <CardContent className="p-6">
             <ul className="space-y-4">
               {supportItems.map((item, index) => (
