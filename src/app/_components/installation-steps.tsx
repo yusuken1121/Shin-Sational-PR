@@ -32,11 +32,11 @@ export function InstallationSteps() {
     <section className="flex items-center justify-center w-full h-full py-24 ">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Installation steps
+          Installation Steps
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step) => (
-            <Card key={step.number} className="bg-zinc-800 border-zinc-700">
+            <Card key={step.number} className="bg-primary border-zinc-700">
               <CardContent className="p-6">
                 <div className="w-12 h-12 rounded-full bg-accent text-black flex items-center justify-center text-xl font-bold mb-4">
                   {step.number}
