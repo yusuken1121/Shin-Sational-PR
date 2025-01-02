@@ -38,7 +38,7 @@ export function InstallationSteps() {
           {steps.map((step) => (
             <Card key={step.number} className="bg-primary border-zinc-700">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-full bg-accent text-black flex items-center justify-center text-xl font-bold mb-4">
+                <div className="w-12 h-12 rounded-full bg-accent shadow-accent text-black flex items-center justify-center text-xl font-bold mb-4">
                   {step.number}
                 </div>
                 <h3 className="text-xl font-bold mb-2">{step.title}</h3>

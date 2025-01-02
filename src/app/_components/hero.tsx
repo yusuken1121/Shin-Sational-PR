@@ -11,7 +11,10 @@ export function Hero() {
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">
           Innovating a digital
           <br />
-          <span className="text-accent">Restaurant</span> menu experience
+          <span className="text-accent shadow-text-accent">
+            Restaurant
+          </span>{" "}
+          menu experience
         </h1>
         <p className="max-w-[600px] mx-auto text-zinc-300 md:text-xl mb-8">
           Modern digital menus with QR codes for a better customer experience
