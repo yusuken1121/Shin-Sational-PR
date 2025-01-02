@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="relative h-[80vh] flex items-center justify-center bg-[url('/placeholder.svg?height=1080&width=1920')] bg-primary bg-center">
+    <section className="relative h-[100vh] flex items-center justify-center bg-[url('/placeholder.svg?height=1080&width=1920')] bg-primary bg-center">
       <div className="absolute inset-0 bg-primary" />
       <div className="relative z-10 container px-4 md:px-6 text-center">
         <p className="inline-block rounded-lg bg-zinc-800 px-3 py-1 text-sm text-zinc-300 mb-6">
