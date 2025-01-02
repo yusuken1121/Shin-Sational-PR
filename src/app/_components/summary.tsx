@@ -16,7 +16,7 @@ function FeatureCard({
   description2,
 }: FeatureCardProps) {
   return (
-    <Card className="border-tertiary">
+    <Card className="border-zinc-700">
       <CardContent className="p-6">
         <div className="flex items-center gap-2 mb-4 ">
           <Check className="w-6 h-6 text-accent" />
@@ -33,7 +33,7 @@ function FeatureCard({
 }
 
 // Features コンポーネント
-export function Features() {
+export function Summaries() {
   const features = [
     {
       title: "Sophisticated Design",
