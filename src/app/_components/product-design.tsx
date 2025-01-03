@@ -19,13 +19,13 @@ import Image from "next/image";
 const laptopDesigns = [
   { title: "Home", img: "/Home/Home.jpg", entireImg: "/Home/Home_Entire.jpg" },
   { title: "menu", img: "1", entireImg: "1" },
-  { title: "homepage", img: "2", entireImg: "2" },
-  { title: "homepage", img: "3", entireImg: "3" },
-  { title: "homepage", img: "4", entireImg: "4" },
+  {
+    title: "Contact Us",
+    img: "/Contact/Contact.jpg",
+    entireImg: "/Contact/Contact_Entire.jpg",
+  },
 ];
 const mobileDesigns = [
-  { title: "homepage", img: "design1.jpg" },
-  { title: "homepage", img: "design1.jpg" },
   { title: "homepage", img: "design1.jpg" },
   { title: "homepage", img: "design1.jpg" },
   { title: "homepage", img: "design1.jpg" },
