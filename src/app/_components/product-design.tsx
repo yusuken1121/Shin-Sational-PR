@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 
 const laptopDesigns = [
-  { title: "menu", img: "design1.jpg" },
+  { title: "menu", img: "/Home/Home.jpg", entireImg: "/Home/Home_Entire.jpg" },
   { title: "menu", img: "design1.jpg" },
   { title: "homepage", img: "design1.jpg" },
   { title: "homepage", img: "design1.jpg" },
@@ -46,7 +46,7 @@ export function ProductDesign() {
                       {design.title}
                     </h4>
                     <div className="p-1">
-                      <Card>
+                      <Card className="border border-none">
                         <AspectRatio ratio={16 / 9}>
                           {/* 画像を表示したい場合は以下のように img タグを使用 */}
                           <Image
