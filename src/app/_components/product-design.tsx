@@ -17,7 +17,7 @@ import { DialogTitle } from "@radix-ui/react-dialog";
 import Image from "next/image";
 
 const laptopDesigns = [
-  { title: "menu", img: "/Home/Home.jpg", entireImg: "/Home/Home_Entire.jpg" },
+  { title: "Home", img: "/Home/Home.jpg", entireImg: "/Home/Home_Entire.jpg" },
   { title: "menu", img: "1", entireImg: "1" },
   { title: "homepage", img: "2", entireImg: "2" },
   { title: "homepage", img: "3", entireImg: "3" },

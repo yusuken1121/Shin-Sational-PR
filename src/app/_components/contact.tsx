@@ -42,7 +42,7 @@ export function Contact() {
     console.log(values);
   }
   return (
-    <section className="flex items-center justify-center w-full h-full py-24">
+    <section className="flex items-center justify-center w-full h-full py-24 bg-primary">
       <div className="container px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Contact
@@ -58,12 +58,12 @@ export function Contact() {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Username</FormLabel>
+                  <FormLabel>Name</FormLabel>
                   <FormControl>
                     {/* <Input placeholder="shadcn" /> */}
                     <Input
                       placeholder="John Doe"
-                      className="bg-primary border-zinc-700"
+                      className="bg-background border-zinc-700"
                       {...field}
                     />
                   </FormControl>
@@ -83,7 +83,7 @@ export function Contact() {
                   <FormControl>
                     <Input
                       placeholder="sample@sample.com"
-                      className="bg-primary border-zinc-700"
+                      className="bg-background border-zinc-700"
                       {...field}
                     />
                   </FormControl>
@@ -103,7 +103,7 @@ export function Contact() {
                   <FormControl>
                     <Input
                       placeholder="Type your message here"
-                      className="bg-primary border-zinc-700"
+                      className="bg-background border-zinc-700"
                       {...field}
                     />
                   </FormControl>
@@ -114,8 +114,9 @@ export function Contact() {
                 </FormItem>
               )}
             />
-
-            <Button type="submit">Submit</Button>
+            <div className="w-full flex justify-end sm:justify-center">
+              <Button type="submit">Submit</Button>
+            </div>
           </form>
         </Form>
       </div>
