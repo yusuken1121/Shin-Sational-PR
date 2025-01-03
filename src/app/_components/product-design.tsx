@@ -26,9 +26,13 @@ const laptopDesigns = [
   },
 ];
 const mobileDesigns = [
-  { title: "homepage", img: "design1.jpg" },
-  { title: "homepage", img: "design1.jpg" },
-  { title: "homepage", img: "design1.jpg" },
+  {
+    title: "Home",
+    img: "/Home/Home_Mobile.jpg",
+    entireImg: "/Home/Home_Mobile_Entire.jpg",
+  },
+  { title: "homepage", img: "design1.jpg", entireImg: "Home_Mobile_Entire" },
+  { title: "homepage", img: "design1.jpg", entireImg: "Home_Mobile_Entire" },
 ];
 
 export function ProductDesign() {
@@ -105,7 +109,7 @@ export function ProductDesign() {
                       {design.title}
                     </h4>
                     <div className="flex justify-center items-center p-1">
-                      <Card className="w-[56%] md:max-w-[350px] xl:max-w-[400px]">
+                      <Card className="w-[56%] md:max-w-[350px] xl:max-w-[400px] border-none">
                         <AspectRatio ratio={9 / 16}>
                           <Image
                             src={design.img}
