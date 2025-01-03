@@ -18,7 +18,7 @@ import Image from "next/image";
 
 const laptopDesigns = [
   { title: "Home", img: "/Home/Home.jpg", entireImg: "/Home/Home_Entire.jpg" },
-  { title: "menu", img: "1", entireImg: "1" },
+  { title: "Menu", img: "/Menu/Menu.jpg", entireImg: "/Menu/Menu.jpg" },
   {
     title: "Contact Us",
     img: "/Contact/Contact.jpg",
