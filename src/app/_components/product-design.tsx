@@ -1,3 +1,4 @@
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -25,32 +26,35 @@ const mobileDesigns = [
 export function ProductDesign() {
   return (
     <section className="flex items-center justify-center w-full h-full py-24 bg-primary">
-      <div className="container px-4 md:px-6">
+      <div className="w-full px-4 md:px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Designs
         </h2>
-        <div className="flex items-center justify-center">
-          <Carousel className="w-4/5 max-w-sm bg-red-200">
+        <div className="flex items-center justify-center w-full">
+          {/* ラップトップ版 */}
+          <Carousel className="w-4/5">
             <CarouselContent className="-ml-1">
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-1 md:basis-1/2 lg:basis-1/3"
+                  className="pl-1 md:basis-2/3 lg:basis-4/5"
                 >
                   <div className="p-1">
                     <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-2xl font-semibold">
-                          {index + 1}
-                        </span>
-                      </CardContent>
+                      <AspectRatio ratio={16 / 9}>
+                        <CardContent className="flex w-full h-full items-center justify-center p-6">
+                          <span className="text-2xl font-semibold">
+                            {index + 1}
+                          </span>
+                        </CardContent>
+                      </AspectRatio>
                     </Card>
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious variant="default" />
+            <CarouselNext variant="default" />
           </Carousel>
         </div>
       </div>
