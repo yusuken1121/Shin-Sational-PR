@@ -29,8 +29,8 @@ export function ProductDesign() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Designs
         </h2>
-        <div className="flex items-center justify-center w-full">
-          <Carousel className="w-full max-w-sm">
+        <div className="flex items-center justify-center">
+          <Carousel className="w-4/5 max-w-sm bg-red-200">
             <CarouselContent className="-ml-1">
               {Array.from({ length: 5 }).map((_, index) => (
                 <CarouselItem
