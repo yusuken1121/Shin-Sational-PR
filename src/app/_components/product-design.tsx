@@ -7,14 +7,21 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { DialogTitle } from "@radix-ui/react-dialog";
 import Image from "next/image";
 
 const laptopDesigns = [
   { title: "menu", img: "/Home/Home.jpg", entireImg: "/Home/Home_Entire.jpg" },
-  { title: "menu", img: "design1.jpg" },
-  { title: "homepage", img: "design1.jpg" },
-  { title: "homepage", img: "design1.jpg" },
-  { title: "homepage", img: "design1.jpg" },
+  { title: "menu", img: "1", entireImg: "1" },
+  { title: "homepage", img: "2", entireImg: "2" },
+  { title: "homepage", img: "3", entireImg: "3" },
+  { title: "homepage", img: "4", entireImg: "4" },
 ];
 const mobileDesigns = [
   { title: "homepage", img: "design1.jpg" },
@@ -46,22 +53,42 @@ export function ProductDesign() {
                       {design.title}
                     </h4>
                     <div className="p-1">
-                      <Card className="border border-none">
-                        <AspectRatio ratio={16 / 9}>
-                          {/* 画像を表示したい場合は以下のように img タグを使用 */}
-                          <Image
-                            src={design.img}
-                            alt={design.title}
-                            fill={true}
-                            className="w-full h-full object-cover"
-                            unoptimized={true}
-                          />
-                        </AspectRatio>
-                      </Card>
+                      <Dialog>
+                        <DialogTrigger className="w-full h-full" asChild>
+                          <Card className="border border-none">
+                            <AspectRatio ratio={16 / 9}>
+                              {/* 画像を表示したい場合は以下のように img タグを使用 */}
+                              <Image
+                                src={design.img}
+                                alt={design.title}
+                                fill={true}
+                                className="w-full h-full object-cover"
+                                unoptimized={true}
+                              />
+                            </AspectRatio>
+                          </Card>
+                        </DialogTrigger>
+                        <DialogContent className="flex flex-col items-center justify-center h-4/5 overflow-y-scroll">
+                          <DialogHeader className="hidden">
+                            <DialogTitle>{design.title}</DialogTitle>
+                          </DialogHeader>
+                          <div className="w-full h-full">
+                            <Image
+                              src={design.entireImg}
+                              alt={design.title}
+                              unoptimized={true}
+                              width={500}
+                              height={800}
+                              className="object-cover "
+                            />
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
+
               <CarouselPrevious variant="default" />
               <CarouselNext variant="default" />
             </Carousel>
