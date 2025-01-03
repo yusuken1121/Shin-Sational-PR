@@ -68,7 +68,7 @@ export function ProductDesign() {
                             </AspectRatio>
                           </Card>
                         </DialogTrigger>
-                        <DialogContent className="flex flex-col items-center justify-center h-4/5 overflow-y-scroll">
+                        <DialogContent className="flex flex-col items-center justify-center h-4/5 overflow-y-scroll bg-secondary">
                           <DialogHeader className="hidden">
                             <DialogTitle>{design.title}</DialogTitle>
                           </DialogHeader>
@@ -100,17 +100,13 @@ export function ProductDesign() {
             <Carousel className="w-4/5">
               <CarouselContent className="-ml-1">
                 {mobileDesigns.map((design, index) => (
-                  <CarouselItem
-                    key={index}
-                    className="pl-1 md:basis-2/3 lg:basis-4/5"
-                  >
+                  <CarouselItem key={index} className="pl-1">
                     <h4 className="flex items-center justify-center">
                       {design.title}
                     </h4>
                     <div className="flex justify-center items-center p-1">
-                      <Card className="w-[56%]">
+                      <Card className="w-[56%] md:max-w-[350px] xl:max-w-[400px]">
                         <AspectRatio ratio={9 / 16}>
-                          {/* 画像を表示したい場合は以下のように img タグを使用 */}
                           <Image
                             src={design.img}
                             alt={design.title}
