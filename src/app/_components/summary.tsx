@@ -2,39 +2,7 @@ import { Check, PenBoxIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { TbCoinOff } from "react-icons/tb";
 import { TiSpannerOutline } from "react-icons/ti";
-
-// FeatureCard コンポーネント
-interface FeatureCardProps {
-  title: string;
-  icon: React.ReactNode;
-  description: string;
-  description2?: string;
-}
-
-function FeatureCard({
-  title,
-  icon,
-  description,
-  description2,
-}: FeatureCardProps) {
-  return (
-    <Card className="border-zinc-700">
-      <CardContent className="p-6">
-        <div className="flex items-center gap-2 mb-4 ">
-          <Check className="w-6 h-6 text-accent" />
-          <h3 className="text-xl font-bold">{title}</h3>
-        </div>
-        <div className="flex items-center justify-center w-full">
-          <div className="w-20 h-20 my-2">{icon}</div>
-        </div>
-        <div className="flex flex-col gap-2 text-zinc-400">
-          <p>{description}</p>
-          {description2 && <p>{description2}</p>}
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
+import { IconCard } from "./common/iconCard";
 
 // Features コンポーネント
 export function Summaries() {
@@ -68,7 +36,7 @@ export function Summaries() {
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <FeatureCard
+            <IconCard
               key={index}
               title={feature.title}
               icon={feature.icon}
