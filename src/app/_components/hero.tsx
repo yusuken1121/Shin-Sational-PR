@@ -15,15 +15,16 @@ export function Hero() {
           Modern QR code menu system.
         </p>
         <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-6">
-          Innovating a digital
+          Shin-Sational 2.0:
           <br />
+          Your Partner in{" "}
           <span className="text-accent shadow-text-accent">
             Restaurant
           </span>{" "}
-          menu experience
+          Branding
         </h1>
         <p className="max-w-[600px] mx-auto text-zinc-300 md:text-xl mb-8">
-          Modern digital menus with QR codes for a better customer experience
+          Innovating a digital Restaurant menu experience
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg" variant="default">
