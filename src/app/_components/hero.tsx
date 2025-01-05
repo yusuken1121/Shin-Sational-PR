@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 export function Hero() {
   return (
     <section className="relative h-[100vh] flex items-center justify-center bg-primary bg-center">
       {/* Transparent background image */}
       <div
-        className="absolute inset-0 bg-[url('/Background/background.png')]  bg-center opacity-60"
+        className="absolute inset-0 bg-[url('/Background/background.png')] bg-center opacity-60"
         aria-hidden="true"
       />
       {/* Overlay for additional color */}

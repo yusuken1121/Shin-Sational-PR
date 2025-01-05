@@ -109,17 +109,38 @@ export function ProductDesign() {
                       {design.title}
                     </h4>
                     <div className="flex justify-center items-center p-1">
-                      <Card className="w-[56%] md:max-w-[350px] xl:max-w-[400px] border-none">
-                        <AspectRatio ratio={9 / 16}>
-                          <Image
-                            src={design.img}
-                            alt={design.title}
-                            fill={true}
-                            className="w-full h-full object-cover"
-                            unoptimized={true}
-                          />
-                        </AspectRatio>
-                      </Card>
+                      {/* Dialog でラップ */}
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Card className="w-[56%] md:max-w-[350px] xl:max-w-[400px] border-none">
+                            <AspectRatio ratio={9 / 16}>
+                              <Image
+                                src={design.img}
+                                alt={design.title}
+                                fill={true}
+                                className="w-full h-full object-cover"
+                                unoptimized={true}
+                              />
+                            </AspectRatio>
+                          </Card>
+                        </DialogTrigger>
+                        {/* DialogContent に全体画像を表示 */}
+                        <DialogContent className="flex flex-col items-center justify-center h-4/5 overflow-y-scroll bg-secondary">
+                          <DialogHeader className="hidden">
+                            <DialogTitle>{design.title}</DialogTitle>
+                          </DialogHeader>
+                          <div className="flex justify-center w-full ">
+                            <Image
+                              src={design.entireImg}
+                              alt={design.title}
+                              unoptimized={true}
+                              width={300}
+                              height={500}
+                              className="object-contain"
+                            />
+                          </div>
+                        </DialogContent>
+                      </Dialog>
                     </div>
                   </CarouselItem>
                 ))}

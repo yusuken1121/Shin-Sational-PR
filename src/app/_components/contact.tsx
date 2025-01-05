@@ -14,6 +14,8 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { apiClientFetch } from "../utils/apiClient";
+import { API_URL, NOTION_API_KEY } from "@/config/ENV";
 
 const formSchema = z.object({
   name: z
@@ -36,11 +38,33 @@ export function Contact() {
       message: "",
     },
   });
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
+    // const api_url = process.env.NEXT_PUBLIC_API_URL;
+    // alert(api_url);
+    try {
+      const response = await fetch(`api/notion-submit`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("Server response:", data);
+    } catch (error) {
+      console.error(error);
+      console.log(error);
+
+      alert("An error occurred. Please try again later.");
+    }
     console.log(values);
-  }
+  };
   return (
     <section className="flex items-center justify-center w-full h-full py-24 bg-primary">
       <div className="container px-4 md:px-6">
@@ -101,7 +125,7 @@ export function Contact() {
                 <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Input
+                    <Textarea
                       placeholder="Type your message here"
                       className="bg-background border-zinc-700"
                       {...field}
