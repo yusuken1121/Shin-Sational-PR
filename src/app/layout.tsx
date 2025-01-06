@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto, Lato } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 // デフォルト
 // const geistSans = localFont({
@@ -42,7 +43,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} antialiased`}>{children}</body>
+      <body className={`${roboto.className} antialiased`}>
+        {children}
+        <Toaster
+          toastOptions={{
+            duration: 5000,
+          }}
+        />
+      </body>
     </html>
   );
 }

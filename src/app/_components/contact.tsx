@@ -14,8 +14,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { apiClientFetch } from "../utils/apiClient";
-import { API_URL, NOTION_API_KEY } from "@/config/ENV";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   name: z
@@ -25,7 +24,7 @@ const formSchema = z.object({
   email: z.string().email("Invalid email address"),
   message: z
     .string()
-    .min(20, "Message must be at least 20 characters long")
+    .min(10, "Message must be at least 10 characters long")
     .max(1000, "Message cannot exceed 1000 characters"),
 });
 
@@ -57,11 +56,10 @@ export function Contact() {
 
       const data = await response.json();
       console.log("Server response:", data);
+      toast.success("Message sent successfully!");
     } catch (error) {
       console.error(error);
-      console.log(error);
-
-      alert("An error occurred. Please try again later.");
+      toast.error("Failed to send message. Please try again later.");
     }
     console.log(values);
   };
