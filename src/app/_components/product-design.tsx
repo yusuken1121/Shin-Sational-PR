@@ -128,7 +128,7 @@ export function ProductDesign() {
                           </Card>
                         </DialogTrigger>
                         {/* DialogContent に全体画像を表示 */}
-                        <DialogContent className="flex flex-col items-center justify-center h-4/5 overflow-y-scroll bg-secondary">
+                        <DialogContent className="flex flex-col items-center justify-start h-4/5 overflow-y-scroll bg-secondary">
                           <DialogHeader className="hidden">
                             <DialogTitle>{design.title}</DialogTitle>
                           </DialogHeader>
