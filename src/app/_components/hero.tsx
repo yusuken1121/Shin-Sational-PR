@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -27,12 +28,16 @@ export function Hero() {
           Innovating a digital Restaurant menu experience
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" variant="default">
-            Demo
-          </Button>
-          <Button size="lg" variant="outline">
-            Contact us
-          </Button>
+          <Link href="#designs">
+            <Button size="lg" variant="default">
+              Design
+            </Button>
+          </Link>
+          <Link href="#contact">
+            <Button size="lg" variant="outline">
+              Contact us
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
