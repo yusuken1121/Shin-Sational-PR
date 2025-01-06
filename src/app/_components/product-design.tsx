@@ -31,8 +31,16 @@ const mobileDesigns = [
     img: "/Home/Home_Mobile.jpg",
     entireImg: "/Home/Home_Mobile_Entire.jpg",
   },
-  { title: "homepage", img: "design1.jpg", entireImg: "Home_Mobile_Entire" },
-  { title: "homepage", img: "design1.jpg", entireImg: "Home_Mobile_Entire" },
+  {
+    title: "Menu",
+    img: "/Menu/Menu_Mobile.jpg",
+    entireImg: "/Menu/Menu_Mobile_Entire.jpg",
+  },
+  {
+    title: "Contact us",
+    img: "/Contact/Contact_Mobile.jpg",
+    entireImg: "/Contact/Contact_Mobile_Entire.jpg",
+  },
 ];
 
 export function ProductDesign() {
