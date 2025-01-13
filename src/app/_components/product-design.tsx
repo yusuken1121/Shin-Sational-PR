@@ -14,6 +14,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { DialogTitle } from "@radix-ui/react-dialog";
+import { MoveDiagonal2, ZoomIn } from "lucide-react";
 import Image from "next/image";
 
 const laptopDesigns = [
@@ -77,9 +78,10 @@ export function ProductDesign() {
                                 src={design.img}
                                 alt={design.title}
                                 fill={true}
-                                className="w-full h-full object-cover"
+                                className="relative w-full h-full object-cover"
                                 unoptimized={true}
                               />
+                              <ZoomIn className="absolute bottom-0 right-0 w-10 h-10" />
                             </AspectRatio>
                           </Card>
                         </DialogTrigger>
@@ -129,9 +131,10 @@ export function ProductDesign() {
                                 src={design.img}
                                 alt={design.title}
                                 fill={true}
-                                className="w-full h-full object-cover"
+                                className="relative w-full h-full object-cover"
                                 unoptimized={true}
                               />
+                              <ZoomIn className="absolute bottom-0 right-0 w-10 h-10" />
                             </AspectRatio>
                           </Card>
                         </DialogTrigger>
