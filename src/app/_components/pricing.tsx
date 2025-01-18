@@ -22,7 +22,9 @@ export function Pricing() {
                 {/* 取り消し線を追加 */}
                 $0/month
               </div>
-              <div className="text-zinc-400">First month free</div>
+              <div className="text-zinc-400">
+                The first three months are free for trial users
+              </div>
             </div>
             <div className="flex items-center justify-center w-full">
               <ul className="space-y-4 mb-6">
@@ -40,9 +42,9 @@ export function Pricing() {
                 </li>
               </ul>
             </div>
-            <Button variant="default" className="w-full">
+            {/* <Button variant="default" className="w-full">
               Get started now
-            </Button>
+            </Button> */}
           </CardContent>
         </Card>
       </div>
